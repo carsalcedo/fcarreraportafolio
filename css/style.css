@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:wght@200;300;400;500;600;700&display=swap');
+:root{
+    --bg-black-900: #f2f2fc;
+    --bg-black-100: #fdf9ff;
+    --bg-black-50: #e8dfec;
+    --text-black-900: #302e4d;
+    --text-black-700: #504e70;
+}
+
+body{
+    line-height: 1.5;
+    font-size: 1rem;
+    font-family: 'Poppins' sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+::before,::after{
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+}
+
+.section{
+    background: var(--bg-black-900);
+    min-height: 100vh;
+    display: block;
+    padding: 0 1.9rem;
+    opacity: 1;
+}
+
+.main-content{
+    padding-left: 16.9rem;
+    
+}
+
+.padd-15{
+    padding-left: .9rem;
+    padding-right: .9rem;
+}
+.container{
+    max-width: 69rem;
+    width: 100%;
+    margin: auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -0.94rem;
+    margin-right: -0.94rem;
+    position: relative;
+}
+
+.btn{
+    font-size: 1rem;
+    font-weight: 500;
+    padding: .75rem 2.19rem;
+    border-radius: 2.5rem;
+    color: #fff;
+    display: inline-block;
+    border: none;
+    white-space: nowrap;
+    background: var(--skin-color);
+    transition: all .3s ease;
+}
+
+.btn:hover{
+    transform: scale(1.05);
+}
+
+/*****aside*******/
+
+.aside{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16.87rem;
+    border-right: 1px solid var(--bg-black-50);
+    background: var(--bg-black-100);
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 1.87rem;
+    height: 100%;
+    z-index: 10;
+}
+
+.aside .logo{
+    position: absolute;
+    top: 3.1rem;
+    font-size: 1.87rem;
+    text-transform: capitalize;
+}
+
+.aside .logo a{
+    color: var(--text-black-900);
+    font-weight: 700;
+    padding: .94rem 1.25rem;
+    font-size: 1.9rem;
+    letter-spacing: .3rem;
+    position: relative;
+}
+
+.aside .logo a span{
+    font-family: 'Clicker Script', cursive;
+    font-size: 2.5rem;
+}
+
+.aside .logo a::before{
+    content: '';
+    position: absolute;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-bottom: 5px solid var(--skin-color);
+    border-left: 5px solid var(--skin-color);
+    bottom: 0;
+    left: 0;
+}
+
+.aside .logo a::after{
+    content: '';
+    position: absolute;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-top: 5px solid var(--skin-color);
+    border-right: 5px solid var(--skin-color);
+    top: 0;
+    right: 0;
+}
+
+.aside .nav-toggler{
+    height: 2.5rem;
+    width: 2.8rem;
+    border: 1px solid var(--bg-black-50);
+    cursor: pointer;
+    position: fixed;
+    left: 18.8rem;
+    top: 1.25rem;
+    border-radius: .3rem;
+    background: var(--bg-black-100);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.aside .nav-toggler span{
+    height: .12rem;
+    width: 1.13rem;
+    background: var(--skin-color);
+    display: inline-block;
+    position: relative;
+}
+.aside .nav-toggler span::before{
+    content: '';
+    height: .12rem;
+    width: 1.13rem;
+    background: var(--skin-color);
+    position: absolute;
+    top: -0.37rem;
+    left: 0;
+}
+
+.aside .nav-toggler span::after{
+    content: '';
+    height: .12rem;
+    width: 1.13rem;
+    background: var(--skin-color);
+    position: absolute;
+    top: 0.37rem;
+    left: 0;
+}
+
+.aside .nav{
+    margin-top: 3.13rem;
+}
+
+.aside .nav li{
+    margin-bottom: 1.25rem;
+    display: block;
+}
+
+
+.aside .nav li a{
+    font-size: 1rem;
+    font-weight: 600;
+    display: block;
+    border-bottom: 1px solid var(--bg-black-50);
+    color: var(--text-black-900);
+    padding: .3rem .9rem;
+}
+
+.aside .nav li a.active{
+    color: var(--skin-color);
+}
+
+.aside .nav li a i{
+    margin-right: .9rem;
+}
+
+/*******HOME************/
+
+.home{
+    min-height: 100vh;
+    display: flex;
+    color: var(--text-black-900);
+}
+
+.home .home-info{
+    flex: 0 0 60%;
+    max-width: 60%;
+}
+
+.home-info p{
+    margin-bottom: 4.38rem;
+    font-size: 1.20rem;
+    color: var(--text-black-700);
+}
+
+h3.hello{
+    font-size: 1.75rem;
+    margin: .94rem 0;
+}
+
+h3.hello span{
+    font-family: 'Clicker Script', cursive;
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: var(--skin-color);
+}
+
+h3.my-profession{
+    font-size: 1.9rem;
+    margin: .94rem 0;
+}
+
+.typing{
+    color: var(--skin-color);
+}
+
+
+.home .home-img{
+    flex: 0 0 40%;
+    max-width: 40%;
+    text-align: center;
+    position: relative;
+}
+
+.home-img::after{
+    content: '';
+    position: absolute;
+    height: 5rem;
+    border-bottom: 10px solid var(--skin-color);
+    border-right: 10px solid var(--skin-color);
+    width: 5rem;
+    right: 1rem;
+    bottom: -2rem;
+}
+
+.home-img::before{
+    content: '';
+    position: absolute;
+    height: 5rem;
+    border-top: 10px solid var(--skin-color);
+    border-left: 10px solid var(--skin-color);
+    width: 5rem;
+    left: 1rem;
+    top: -2rem;
+}
+
+.home .home-img img{
+    height: 25rem;
+    border-radius: .31rem;
+    margin: auto;
+}
