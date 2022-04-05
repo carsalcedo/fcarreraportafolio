@@ -427,7 +427,7 @@ h3.my-profession{
 }
 
 .about .about-content .about-text p{
-    font-size: 1rem;
+    font-size: 1.2rem;
     line-height: 1.56rem;
     color: var(--text-black-700);
 }
@@ -610,6 +610,144 @@ h3.my-profession{
     text-align: justify;
     color: var(--text-black-700);
 }
+
+/*SERVICES*/
+
+.service .container{
+    padding-bottom: 2.5rem;
+}
+
+.service .service-item{
+    margin-bottom: 1.9rem;
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+}
+
+.service .service-item .service-item-inner{
+    background-color: var(--bg-black-100);
+    border: 1px solid var(--bg-black-50);
+    border-radius: .62rem;
+    padding: 1.9rem .94rem;
+    text-align: center;
+    transition: all .35 ease;
+}
+
+.service .service-item .service-item-inner:hover{
+    box-shadow: 0 0 20px rgba(48, 46, 77, .15);
+}
+
+.service .service-item .service-item-inner .icon{
+    height: 3.75rem;
+    width: 3.75rem;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 1.9rem;
+    text-align: center;
+    transition: all .3s ease;
+}
+
+.service .service-item .service-item-inner .icon i{
+    font-size: 2.5rem;
+    line-height: 3.75rem;
+    color: var(--skin-color);
+    transition: all .3s ease;
+}
+
+.service .service-item .service-item-inner:hover .icon{
+    background: var(--skin-color);
+}
+
+.service .service-item .service-item-inner:hover .icon i{
+    font-size: 1.56rem;
+    color: #ffffff;
+}
+
+.service .service-item .service-item-inner h4{
+    font-size: 1.13rem;
+    margin-bottom: .94rem;
+    color: var(--text-black-900);
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.service .service-item .service-item-inner p{
+    font-size: 1rem;
+    color: var(--text-black-700);
+    line-height: 1.56rem;
+}
+
+/*PORTFOLIO*/
+
+.portfolio .container{
+    padding-bottom: 2.5rem;
+}
+
+.portfolio .portfolio-heading{
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 2.5rem;
+}
+
+.portfolio .portfolio-heading h2{
+    color: var(--text-black-900);
+    font-weight: 500;
+}
+
+.portfolio .portfolio-item{
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    margin-bottom: 1.9rem;
+}
+
+.portfolio .portfolio-item-inner{
+    border: 6px solid var(--bg-black-100);
+    border-radius: .63rem;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+}
+
+.portfolio .portfolio-item-inner .portfolio-img img{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.portfolio .portfolio-item-inner .portfolio-info{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: var(--bg-black-900);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    transition: all .3s ease;
+    transform: scale(0);
+}
+
+.portfolio .portfolio-item-inner .portfolio-info a{
+    color: var(--text-black-900);
+    font-size: 1.5rem;
+    padding-bottom: 2rem;
+    transition: all .3s ease;
+}
+
+.portfolio .portfolio-item-inner .portfolio-info a:hover{
+    font-size: 2rem;
+}
+
+.portfolio .portfolio-item-inner .portfolio-info .logos-tecnologies img{
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 0 .5rem;
+}
+
+.portfolio .portfolio-item-inner:hover .portfolio-info{
+    transform: scale(1);
+} 
 
 
 
