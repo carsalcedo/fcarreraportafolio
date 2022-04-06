@@ -343,6 +343,7 @@ ul{
     margin-bottom: 4.38rem;
     font-size: 1.20rem;
     color: var(--text-black-700);
+    text-align: justify;
 }
 
 h3.hello{
@@ -430,6 +431,7 @@ h3.my-profession{
     font-size: 1.2rem;
     line-height: 1.56rem;
     color: var(--text-black-700);
+    text-align: justify;
 }
 
 .about .about-content .personal-info{
@@ -839,6 +841,56 @@ h3.my-profession{
 .contact .contact-form  .btn{
     height: 3.12rem;
     padding: 0 3.12rem;
+}
+
+@media (max-width:1199px){
+
+    .aside{
+        left: -16.9rem;
+    }
+
+    .main-content{
+        padding-left: 0;
+    }
+
+    .about .about-content .personal-info .info-item p span{
+        display: block;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 991px){
+    .home .home-info
+    {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .home .home-img{
+        display: none;
+    }
+
+    .service .service-item,
+    .portfolio .portfolio-item,
+    .contact .contact-info-item{
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 762px){
+
+    .about .about-content .skills,
+    .about .about-content .personal-info,
+    .about .about-content .education,
+    .about .about-content .experience,
+    .service .service-item,
+    .portfolio .portfolio-item,
+    .contact .contact-info-item,
+    .contact .contact-form .col-6{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
 }
 
 
