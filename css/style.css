@@ -5,6 +5,8 @@
     --bg-black-50: #e8dfec;
     --text-black-900: #302e4d;
     --text-black-700: #504e70;
+    --form-ok-color: #4caf50;
+    --form-error-color: #DC143C;
 }
 
 body.dark{
@@ -43,10 +45,34 @@ ul{
     display: block;
     padding: 0 1.9rem;
     opacity: 1;
+    position: fixed;
+    left: 270px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all .3s ease;
 }
 
-.main-content{
-    padding-left: 16.9rem; 
+.section.back-section{
+    z-index: 1;
+}
+
+.section.active{
+    z-index: 2;
+    opacity: 1;
+    animation: slideSection 1s ease;
+}
+
+@keyframes slideSection{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
 }
 
 .hidden{
@@ -220,6 +246,7 @@ ul{
     padding: 1.87rem;
     height: 100%;
     z-index: 10;
+    transition: all .3s ease;
 }
 
 .aside .logo{
@@ -242,6 +269,7 @@ ul{
     font-family: 'Clicker Script', cursive;
     font-size: 2.5rem;
 }
+
 
 .aside .logo a::before{
     content: '';
@@ -271,13 +299,14 @@ ul{
     border: 1px solid var(--bg-black-50);
     cursor: pointer;
     position: fixed;
-    left: 18.8rem;
-    top: 1.25rem;
+    right: 18.8rem;
+    bottom: 1.25rem;
     border-radius: .3rem;
     background: var(--bg-black-100);
     display: none;
     align-items: center;
     justify-content: center;
+    transition: all .3s ease;
 }
 
 .aside .nav-toggler span{
@@ -287,6 +316,12 @@ ul{
     display: inline-block;
     position: relative;
 }
+
+.aside .nav-toggler.open span{
+    background-color: transparent;
+}
+
+
 .aside .nav-toggler span::before{
     content: '';
     height: .12rem;
@@ -297,6 +332,11 @@ ul{
     left: 0;
 }
 
+.aside .nav-toggler.open span::before{
+    transform: rotate(45deg);
+    top: 0;
+}
+
 .aside .nav-toggler span::after{
     content: '';
     height: .12rem;
@@ -305,6 +345,11 @@ ul{
     position: absolute;
     top: 0.37rem;
     left: 0;
+}
+
+.aside .nav-toggler.open span::after{
+    transform: rotate(-45deg);
+    top: 0;
 }
 
 .aside .nav{
@@ -851,15 +896,59 @@ h3.my-profession{
     padding: 0 3.12rem;
 }
 
+.contact .contact-form [required]:valid{
+    border: thin solid var( --form-ok-color);
+}
+
+.contact .contact-form [required]:invalid{
+    border: thin solid  var(--form-error-color);
+}
+
+.contact .contact-form .contact-form-error{
+    margin-top: -1rem;
+    font-size: 80%;
+    background-color: var(--form-error-color);
+    color: #fff;
+    transition: all 800ms ease;
+}
+
+.contact .contact-form .contact-form-error.is-active{
+    display: block;
+    animation: show message 1s 1 normal 0s ease-out both;
+}
+
+
+.contact-form-response{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--form-ok-color);
+    text-align: center;
+}
+
+.none{
+    display: none;
+}
+
 @media (max-width:1199px){
 
     .aside{
         left: -16.9rem;
     }
 
-    .main-content{
-        padding-left: 0;
+    .aside.open{
+        left: 0;
     }
+
+    .aside .nav-toggler{
+        display: flex;
+        right: 1rem;
+    }
+
+    
+    .section{
+        left: 0;
+    }
+
 
     .about .about-content .personal-info .info-item p span{
         display: block;

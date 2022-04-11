@@ -52,7 +52,7 @@
         <div class="main-content">
 
             <!-- ----home section start----- -->
-            <section id="home" class="home section">
+            <section id="home" class="home active section">
                 <div class="container">
                     <div class="row">
                         <div class="home-info padd-15">
@@ -64,7 +64,7 @@
                             </p>
 
                             <div class="row padd-15">
-                                 <a href="#portfolio" class="btn hire-me">Portfolio</a>
+                                 <a href="#portfolio" data-section-index="3" class="btn portafolio">Portfolio</a>
 
                                 <div class="btn-wrap">
                                     <span>Follow me</span>
@@ -128,7 +128,7 @@
                                     <div class="row">
                                         <div class="buttons padd-15">
                                             <a href="#" class="btn">Download CV</a>
-                                            <a href="#contact" class="btn hire-me">Hire me</a>
+                                            <a href="#contact" data-section-index="4" class="btn hire-me">Hire me</a>
                                         </div>
                                     </div>
                                 </div>
@@ -413,44 +413,79 @@
                 <h3 class="contact-title padd-15">SEND ME AN EMAIL</h3>
                 <h4 class="contact-sub-title padd-15">I´M VERY RESPONSIVE TO MESSAGE</h4>
                 <div class="row">
-                    <div class="contact-form padd-15">
+                    <form action="" class="contact-form padd-15">
                         <div class="row">
                             <div class="form-item col-6 padd-15">
                                 <div class="form-group">
-                                    <input type="text" name="name" id="name" class="form-control" placeholder="your name" required>
+                                    <input type="text"
+                                           name="name" 
+                                           id="name" 
+                                           class="form-control"
+                                           title="name only accept words and white spaces" 
+                                           pattern="^[A-Za-zÑñÁáÉéÍíÓóÚú\s]+$"  
+                                           placeholder="your name" 
+                                           required>
                                 </div>
                             </div>
                             <div class="form-item col-6 padd-15">
                                 <div class="form-group">
-                                    <input type="email" name="email" id="email" class="form-control" placeholder="your email" required>
+                                    <input type="email"
+                                     name="email" 
+                                     id="email" 
+                                     class="form-control" 
+                                     title="wemail format no valid" 
+                                     pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" 
+                                     placeholder="your email" 
+                                     required>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-item col-6 padd-15">
                                 <div class="form-group">
-                                    <input type="text" name="subject" id="subject" class="form-control" placeholder="subject" required>
+                                    <input type="text"
+                                     name="subject" 
+                                     id="subject"
+                                     title="subject is required"
+                                     class="form-control" 
+                                     placeholder="subject"
+                                     required>
                                 </div>
                             </div>
                             <div class="form-item col-6 padd-15">
                                 <div class="form-group">
-                                    <input type="text" name="company" id="company" class="form-control" placeholder="company" required>
+                                    <input type="text"
+                                     name="company" 
+                                     id="company" 
+                                     title="company´s name is required"
+                                     class="form-control"
+                                     placeholder="company"
+                                      required>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-item col-12 padd-15">
                                 <div class="form-group">
-                                <textarea name="message" id="message" class="form-control" placeholder="Message"></textarea>
+                                <textarea name="message"
+                                 id="message"
+                                 class="form-control" 
+                                 cols="50" rows="5" 
+                                 placeholder="Write your Message"
+                                 data-pattern="^.{1,255}$"
+                                 title="your comment should not exceed 255 characters" required></textarea>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-item col-12 padd-15">
-                                <button type="submit" class="btn">Send Message</button>
+                                <input type="submit" class="btn" value="Send Message">
+                            </div>
+                            <div class="form-item col-12 padd-15 contact-form-response none">
+                                <p>Data Sent</p>
                             </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
                </div>
             </section>
@@ -478,6 +513,8 @@
      integrity="sha512-3J8teBiHrSyaaRBajZyIEtpDsXdPq1gsznKWIVb5CnorQuFhjWGhWe54z8YNnHHr7MZuExb9m5kvf964HiT1Sw=="
      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/script.js"></script>
+    <!--<script src="js/domLoader.js" type="module"></script>-->
+    <script src="js/formularioControl.js"></script>
     <script src="js/style-switcher.js"></script>
 </body>
 </html>
