@@ -900,9 +900,9 @@ h3.my-profession{
     border: thin solid var( --form-ok-color);
 }
 
-.contact .contact-form [required]:invalid{
+/*.contact .contact-form [required]:invalid{
     border: thin solid  var(--form-error-color);
-}
+}*/
 
 .contact .contact-form .contact-form-error{
     margin-top: -1rem;
@@ -987,6 +987,15 @@ h3.my-profession{
     .contact .contact-form .col-6{
         flex: 0 0 100%;
         max-width: 100%;
+    }
+}
+
+@media (max-height:430px){
+    .aside .nav{
+        padding-top: 4.13rem;
+    }
+    .aside .logo{
+        top: 2.5rem;
     }
 }
 
