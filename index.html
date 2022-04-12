@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fernando Carrera Web Developer</title>
+    <meta name="description" content="web about Computer Science Engineer Fernando Carrera">
+    <meta name="keywords" content="frontEnd, web developer, react, javascript, css, html, landingpages, portfolio">
+    <link rel="icon" href="assets/iconos web/physics.png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style-switcher.css">
     <link rel="stylesheet" href="css/skins/color-1.css">
@@ -413,7 +416,7 @@
                 <h3 class="contact-title padd-15">SEND ME AN EMAIL</h3>
                 <h4 class="contact-sub-title padd-15">I´M VERY RESPONSIVE TO MESSAGE</h4>
                 <div class="row">
-                    <form action="" class="contact-form padd-15">
+                    <form action="" class="contact-form padd-15" id="contact-form">
                         <div class="row">
                             <div class="form-item col-6 padd-15">
                                 <div class="form-group">
@@ -479,9 +482,9 @@
                         </div>
                         <div class="row">
                             <div class="form-item col-12 padd-15">
-                                <input type="submit" class="btn" value="Send Message">
+                                <input type="submit" class="btn" id="button" value="Send Message">
                             </div>
-                            <div class="form-item col-12 padd-15 contact-form-response none">
+                            <div class="form-item col-12 padd-15 contact-form-response none" id="mensaje-sent">
                                 <p>Data Sent</p>
                             </div>
                         </div>
@@ -513,6 +516,11 @@
      integrity="sha512-3J8teBiHrSyaaRBajZyIEtpDsXdPq1gsznKWIVb5CnorQuFhjWGhWe54z8YNnHHr7MZuExb9m5kvf964HiT1Sw=="
      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="js/script.js"></script>
+    <script type="text/javascript"
+     src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+     <script type="text/javascript">
+        emailjs.init('MmQPZ8xRj_DM_qoiQ')
+      </script>
     <!--<script src="js/domLoader.js" type="module"></script>-->
     <script src="js/formularioControl.js"></script>
     <script src="js/style-switcher.js"></script>

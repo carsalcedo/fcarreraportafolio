@@ -33,8 +33,37 @@ const d = document;
         }
     });
 
+        const btn = d.getElementById('button');
 
-    d.addEventListener("submit", (e) =>{
+        d.getElementById('contact-form')
+        .addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        btn.value = 'Sending...';
+
+        const serviceID = 'service_hxzfxb7';
+        const templateID = 'template_nx6oqc9';
+
+        emailjs.sendForm(serviceID, templateID, this)
+            .then(() => {
+            d.getElementById('mensaje-sent').classList.remove('none');
+                btn.value = 'Send Message';
+                d.getElementById('contact-form').reset();
+
+                setTimeout(() => {
+                    d.getElementById('mensaje-sent').classList.add('none');
+                }, 2000);
+
+            }, (err) => {
+            btn.value = 'Send Email';
+            alert(JSON.stringify(err));
+            });
+        });
+
+
+
+
+   /* d.addEventListener("submit", (e) =>{
         e.preventDefault();
         alert("enviando formulario");
 
@@ -49,7 +78,7 @@ const d = document;
             }, 3000)
             
         }, 3000);
-    });
+    });*/
 
 
 }
